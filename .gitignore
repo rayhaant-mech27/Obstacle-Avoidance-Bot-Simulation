@@ -1,0 +1,12 @@
+# Colcon build artifacts - auto generated, don't track
+build/
+install/
+log/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Editor swap files
+*.swp
+*~

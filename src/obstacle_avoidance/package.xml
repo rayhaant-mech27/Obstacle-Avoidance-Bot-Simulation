@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>obstacle_avoidance</name>
+  <version>0.0.1</version>
+  <description>Obstacle avoidance robot in ROS2 and Gazebo</description>
+  <maintainer email="your_email@email.com">your_name</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>gazebo_ros</depend>
+  <depend>robot_state_publisher</depend>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
