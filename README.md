@@ -1,8 +1,6 @@
 # Obstacle Avoidance Robot — ROS2 Humble + Gazebo
 
-A fully simulated differential-drive robot that autonomously navigates a walled arena,
-detects obstacles using a 360° LiDAR sensor, and steers away from them in real time.
-Built entirely from scratch using ROS2 Humble and Gazebo Classic on Ubuntu 22.04.
+Simulated differential-drive robot that autonomously navigates around an obstacle filled environment,detects obstacles using a LiDAR sensor, and steers away from the the obstacle. Built using ROS2 Humble and Gazebo Classic on Ubuntu 22.04.
 
 ---
 
@@ -32,17 +30,29 @@ Built entirely from scratch using ROS2 Humble and Gazebo Classic on Ubuntu 22.04
 ##  Project Structure
 
 ros2_ws/
+
 └── src/
+
 └── obstacle_avoidance/
+
 ├── obstacle_avoidance/
+
 │   └── obstacle_avoidance_node.py   # Robot brain (state machine)
+
 ├── launch/
+
 │   └── obstacle_avoidance.launch.py # Starts everything with one command
+
 ├── urdf/
+
 │   └── robot.urdf                   # Robot body + Gazebo plugins
+
 ├── worlds/
+
 │   └── obstacle_world.world         # Walled arena with obstacles
+
 ├── setup.py
+
 └── package.xml
 
 ---
@@ -50,15 +60,25 @@ ros2_ws/
 ## 🧠 How It Works
 
 [Gazebo Simulation]
+
 ↓
+
 [LiDAR Sensor] → publishes 360° distances → /scan topic
+
 ↓
+
 [ObstacleAvoider Node]
+
 reads /scan, decides action
+
 ↓
+
 publishes speed → /cmd_vel topic
+
 ↓
+
 [Differential Drive Plugin]
+
 spins wheels → Robot moves!
 
 ### State Machine Logic
@@ -114,17 +134,16 @@ source install/setup.bash
 ros2 launch obstacle_avoidance obstacle_avoidance.launch.py
 ```
 
-That's it! Gazebo opens with the robot already running the avoidance algorithm. 🎉
 
 ---
 
-## Common Errors
+## Common Errors Faced
 
 | Error | Fix |
 |---|---|
 | `Address already in use` | `pkill -9 -f gzserver && pkill -9 -f gazebo` |
 | Robot not turning | Increase `max_wheel_torque` in robot.urdf |
-| RTPS_TRANSPORT_SHM warnings | `export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp` |
+| 'RTPS_TRANSPORT_SHM' warnings | export 'RMW_IMPLEMENTATION=rmw_cyclonedds_cpp` |
 
 ---
 
@@ -142,6 +161,9 @@ That's it! Gazebo opens with the robot already running the avoidance algorithm. 
 ## Author
 
 RAYHAAN T
+
 Final Year Mechanical Engineering Student | Robotics Enthusiast
+
 📍 Chennai, India
+
 🔗 linkedin.com/in/rayhaan-t-742709290/
