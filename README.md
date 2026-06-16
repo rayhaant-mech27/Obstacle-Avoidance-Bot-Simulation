@@ -31,7 +31,6 @@ Simulated differential-drive robot that autonomously navigates around an obstacl
 
 
 ros2_ws/
-
 └── src/
 
     └── obstacle_avoidance/
@@ -43,7 +42,6 @@ ros2_ws/
         ├── launch/
         
         │   └── obstacle_avoidance.launch.py # Starts everything with one command
-        
         ├── urdf/
         
         │   └── robot.urdf                   # Robot body + Gazebo plugins
