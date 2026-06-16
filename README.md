@@ -53,7 +53,6 @@ ros2_ws/
         │   └── obstacle_world.world         # Walled arena with obstacles
         
         ├── setup.py
-        
         └── package.xml
 
 
