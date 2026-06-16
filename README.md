@@ -144,6 +144,9 @@ ros2 launch obstacle_avoidance obstacle_avoidance.launch.py
 ## Author
 
 RAYHAAN T
-Final Year Mechanical Engineering Student | Robotics Enthusiast
+
+Final Year, UG Mechanical Engineering Student, CIT Chennai
+
 📍 Chennai, India
+
 🔗 linkedin.com/in/rayhaan-t-742709290/
