@@ -30,29 +30,17 @@ Simulated differential-drive robot that autonomously navigates around an obstacl
 ##  Project Structure
 
 ros2_ws/
-
 └── src/
-
 └── obstacle_avoidance/
-
 ├── obstacle_avoidance/
-
 │   └── obstacle_avoidance_node.py   # Robot brain (state machine)
-
 ├── launch/
-
 │   └── obstacle_avoidance.launch.py # Starts everything with one command
-
 ├── urdf/
-
 │   └── robot.urdf                   # Robot body + Gazebo plugins
-
 ├── worlds/
-
 │   └── obstacle_world.world         # Walled arena with obstacles
-
 ├── setup.py
-
 └── package.xml
 
 ---
@@ -60,15 +48,10 @@ ros2_ws/
 ## 🧠 How It Works
 
 [Gazebo Simulation]
-
 ↓
-
 [LiDAR Sensor] → publishes 360° distances → /scan topic
-
 ↓
-
 [ObstacleAvoider Node]
-
 reads /scan, decides action
 
 ↓
@@ -143,7 +126,7 @@ ros2 launch obstacle_avoidance obstacle_avoidance.launch.py
 |---|---|
 | `Address already in use` | `pkill -9 -f gzserver && pkill -9 -f gazebo` |
 | Robot not turning | Increase `max_wheel_torque` in robot.urdf |
-| 'RTPS_TRANSPORT_SHM' warnings | export 'RMW_IMPLEMENTATION=rmw_cyclonedds_cpp` |
+| `RTPS_TRANSPORT_SHM` warnings | export `RMW_IMPLEMENTATION=rmw_cyclonedds_cpp` |
 
 ---
 
@@ -161,9 +144,6 @@ ros2 launch obstacle_avoidance obstacle_avoidance.launch.py
 ## Author
 
 RAYHAAN T
-
 Final Year Mechanical Engineering Student | Robotics Enthusiast
-
 📍 Chennai, India
-
 🔗 linkedin.com/in/rayhaan-t-742709290/
