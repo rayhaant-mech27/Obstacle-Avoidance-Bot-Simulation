@@ -30,20 +30,7 @@ Simulated differential-drive robot that autonomously navigates around an obstacl
 ##  Project Structure
 
 
-ros2_ws/ 
 
-└── src/
-    └── obstacle_avoidance/
-        ├── obstacle_avoidance/
-        │   └── obstacle_avoidance_node.py   # Robot brain (state machine)       
-        ├── launch/
-        │   └── obstacle_avoidance.launch.py # Starts everything with one command
-        ├── urdf/
-        │   └── robot.urdf                   # Robot body + Gazebo plugins
-        ├── worlds/
-        │   └── obstacle_world.world         # Walled arena with obstacles
-        ├── setup.py
-        └── package.xml
         
         
  	ros2_ws/
@@ -63,19 +50,19 @@ ros2_ws/
 
 ---
 
-## 🧠 How It Works
+## Working
 
-[Gazebo Simulation]
-↓
-[LiDAR Sensor] → publishes 360° distances → /scan topic
-↓
-[ObstacleAvoider Node]
-reads /scan, decides action
-↓
-publishes speed → /cmd_vel topic
-↓
-[Differential Drive Plugin]
-spins wheels → Robot moves
+		[Gazebo Simulation]
+			↓
+		[LiDAR Sensor] → publishes 360° distances → /scan topic
+			↓
+		[ObstacleAvoider Node]
+		reads /scan, decides action
+			↓
+		publishes speed → /cmd_vel topic
+			↓
+		[Differential Drive Plugin]
+		spins wheels → Robot moves
 
 ### State Machine Logic
 
